@@ -9,7 +9,7 @@ html{
 
 
 
-/* VARIABLE */
+/* VARIABLES */
 :root {
     --font: 'Rubik', sans-serif;
     --bgColor: #ffffff;
@@ -20,7 +20,7 @@ html{
     --humidityColor: #07C3E6;
     --particulateColor: #AAAAAA; 
 }
-/* VARIABLE */
+/* VARIABLES */
 
 
 
@@ -33,13 +33,13 @@ h1{
 }
 h2{
     font-family: var(--font);
-    font-size: 32px;
+    font-size: calc(24px + (34 - 24) * ((100vw - 300px) / (1600 - 300)));
     font-weight: 500;
     color: var(--fontColor);
 }
 h3{
     font-family: var(--font);
-    font-size: 24px;
+    font-size: calc(18px + (28 - 18) * ((100vw - 300px) / (1600 - 300)));
     font-weight: lighter;
     color: var(--fontColor);
 }
@@ -57,15 +57,23 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     width: 100%;
     min-height: 100vh;
+
+    flex-wrap: wrap;
+}
+.monitor{
+    width: 50%;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .row{
-    min-width: 250px;
-    width: 25%;
     text-align: center;
     margin: 2rem;
+    width: 50%;
+    min-width: 250px;
 }
 .container{
     margin-top: 1.5rem;
