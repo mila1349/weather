@@ -1,0 +1,103 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 12px;
+}
+
+
+
+/* VARIABLE */
+:root {
+    --font: 'Rubik', sans-serif;
+    --bgColor: #ffffff;
+    --containerColor: #F1F1F1;
+    --fontColor: #383838;
+    --titleColor: #0C818A;
+    --tempratureColor: #FFF02E;
+    --humidityColor: #07C3E6;
+    --particulateColor: #AAAAAA; 
+}
+/* VARIABLE */
+
+
+
+/* TYPOGRAPHY */
+h1{
+    font-family: var(--font);
+    font-size: calc(28px + (40 - 28) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: bolder;
+    color: var(--titleColor);
+}
+h2{
+    font-family: var(--font);
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--fontColor);
+}
+h3{
+    font-family: var(--font);
+    font-size: 24px;
+    font-weight: lighter;
+    color: var(--fontColor);
+}
+p{
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--fontColor);
+}
+/* TYPOGRAPHY */
+
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+}
+.row{
+    min-width: 250px;
+    width: 25%;
+    text-align: center;
+    margin: 2rem;
+}
+.container{
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    
+    background: var(--containerColor);
+}
+.box{
+    border-radius: 8px;
+    width: 100%;
+    background: rgba(197, 81, 81, 0.933);
+    margin: 0.5rem 0;
+    padding: 1rem;
+}
+.box span{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.temprature{
+    background: var(--tempratureColor);
+}
+.humidity{
+    background: var(--humidityColor);
+}
+.particulate{
+    background: var(--particulateColor);
+}
