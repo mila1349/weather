@@ -10,44 +10,77 @@ html{
 
 
 /* VARIABLES */
-:root {
-    --font: 'Rubik', sans-serif;
-    --bgColor: #ffffff;
-    --containerColor: #F1F1F1;
-    --fontColor: #383838;
-    --titleColor: #0C818A;
-    --tempratureColor: #FFF02E;
-    --humidityColor: #07C3E6;
-    --particulateColor: #AAAAAA; 
+.bgColor{
+    background: #ffffff;
+}
+.containerColor{
+    background: #F1F1F1;
+}
+.tempratureColor{
+    background: #FFF02E;
+}
+.humidityColor{
+    background: #07C3E6;
+}
+.particulateColor{
+    background: #AAAAAA;
 }
 /* VARIABLES */
 
 
+/* FONT FACE */
+@font-face {
+    font-family: rubik-bold;
+    src: url(font/Rubik-Bold.ttf);
+}
+@font-face {
+    font-family: rubik-medium;
+    src: url(font/Rubik-Medium.ttf);
+}
+@font-face {
+    font-family: rubik-regular;
+    src: url(font/Rubik-Regular.ttf);
+}
+@font-face {
+    font-family: rubik-semibold;
+    src: url(font/Rubik-SemiBold.ttf);
+}
+@font-face {
+    font-family: roboto-medium;
+    src: url(font/Roboto-Medium.ttf);
+}
+/* FONT FACE */
+
 
 /* TYPOGRAPHY */
 h1{
-    font-family: var(--font);
+    font-family: rubik-bold;
     font-size: calc(26px + (40 - 26) * ((100vw - 300px) / (1600 - 300)));
     font-weight: bolder;
-    color: var(--titleColor);
+    color: #0C818A;
 }
 h2{
-    font-family: var(--font);
+    font-family: rubik-medium;
     font-size: calc(24px + (34 - 24) * ((100vw - 300px) / (1600 - 300)));
     font-weight: 500;
-    color: var(--fontColor);
+    color: #383838;
+
 }
 h3{
-    font-family: var(--font);
+    font-family: rubik-regular;
     font-size: calc(18px + (26 - 18) * ((100vw - 300px) / (1600 - 300)));
     font-weight: lighter;
-    color: var(--fontColor);
+    color: #383838;
 }
 p{
-    font-family: var(--font);
+    font-family: rubik-semibold;
     font-size: 20px;
     font-weight: 500;
-    color: var(--fontColor);
+    color: #383838;
+}
+.symbol{
+    font-family: roboto-medium;
+    font-weight: 600;
 }
 /* TYPOGRAPHY */
 
@@ -71,6 +104,10 @@ section{
 }
 .row{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 1rem 2rem;
     width: 50%;
     min-width: 250px;
@@ -84,14 +121,16 @@ section{
     flex-direction: column;
     padding: 2rem;
     
-    background: var(--containerColor);
 }
 .box{
     border-radius: 8px;
     width: 100%;
-    background: rgba(197, 81, 81, 0.933);
     margin: 0.5rem 0;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .box span{
     width: 100%;
@@ -111,14 +150,4 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.temprature{
-    background: var(--tempratureColor);
-}
-.humidity{
-    background: var(--humidityColor);
-}
-.particulate{
-    background: var(--particulateColor);
 }
