@@ -6,6 +6,9 @@
 html{
     font-size: 12px;
 }
+body{
+    overflow-y: hidden;
+}
 
 
 
@@ -55,20 +58,23 @@ html{
 /* TYPOGRAPHY */
 h1{
     font-family: rubik-bold;
-    font-size: calc(26px + (40 - 26) * ((100vw - 300px) / (1600 - 300)));
+    /* font-size: calc(26px + (40 - 26) * ((100vw - 300px) / (1600 - 300))); */
+    font-size: 38px;
     font-weight: bolder;
     color: #0C818A;
 }
 h2{
     font-family: rubik-medium;
-    font-size: calc(24px + (34 - 24) * ((100vw - 300px) / (1600 - 300)));
+    /* font-size: calc(24px + (34 - 24) * ((100vw - 300px) / (1600 - 300))); */
+    font-size: 30px;
     font-weight: 500;
     color: #383838;
 
 }
 h3{
     font-family: rubik-regular;
-    font-size: calc(18px + (26 - 18) * ((100vw - 300px) / (1600 - 300)));
+    /* font-size: calc(18px + (26 - 18) * ((100vw - 300px) / (1600 - 300))); */
+    font-size: 24px;
     font-weight: lighter;
     color: #383838;
 }
@@ -82,61 +88,75 @@ p{
     font-family: roboto-medium;
     font-weight: 600;
 }
+
+@media screen and (max-width: 900px) {
+    h1{
+        font-size: 28px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 20px;
+    }
+  }
 /* TYPOGRAPHY */
 
 
 
 section{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    min-height: 100vh;
+    /* width: 100vw; */
+    /* min-height: 100vh; */
 
-    flex-wrap: wrap;
 }
 .monitor{
     width: 50%;
-    min-width: 250px;
-    display: flex;
-    justify-content: center;
+    /* min-width: 250px; */
+    height: 100vh;
+    /* background: #000; */
     align-items: center;
+    position: relative;
 }
+.monitor:first-of-type{
+    float: left;
+    /* background: #7f9194; */
+}
+.monitor:last-of-type{
+    float: right;
+    /* background: yellow; */
+}
+
 .row{
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     margin: 1rem 2rem;
     width: 50%;
     min-width: 250px;
+    background: white;
+
+    /* transform: translateX(50%); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .container{
     margin-top: 1.5rem;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     padding: 2rem;
-    
+    background: #F1F1F1;
+
 }
 .box{
     border-radius: 8px;
     width: 100%;
     margin: 0.5rem 0;
     padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 .box span{
     width: 100%;
-    justify-content: center;
     align-items: center;
-    display: flex;
+    
 }
 .overlay{
     width: 100%;
@@ -150,4 +170,26 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        overflow: visible;
+    }
+    .monitor{
+        width: 100%;
+    }
+    .row{
+        margin: 0;
+    }
+  }
+
+.temprature{
+    background: #FFF02E;
+}
+.humidity{
+    background: #07C3E6;
+}
+.particulate{
+    background: #AAAAAA;
 }
